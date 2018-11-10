@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class User : AuditableEntity<User>
+    public class User : BaseEntity
     {
         [Required(ErrorMessage = "The field LoginID is required")]
         [StringLength(20, ErrorMessage = "The field LoginID must have max length of 20 characters")]

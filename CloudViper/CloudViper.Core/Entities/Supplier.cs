@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class Supplier : AuditableEntity<Supplier>
+    public class Supplier : BaseEntity
     {
         [Required(ErrorMessage = "The field SupplierName is required")]
         [StringLength(50, ErrorMessage = "The field SupplierName must have max length of 50 characters")]

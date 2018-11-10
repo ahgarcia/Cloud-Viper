@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class Company : AuditableEntity<Company>
+    public class Company : BaseEntity
     {
         [Required(ErrorMessage = "The field CompanyName is required")]
         [StringLength(50, ErrorMessage = "The field CompanyName must have max length of 50 characters")]

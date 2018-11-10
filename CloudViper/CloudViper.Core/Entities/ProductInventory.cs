@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class ProductInventory : AuditableEntity<ProductInventory>
+    public class ProductInventory : BaseEntity
     {
         [ForeignKey("Product")]
         [Required(ErrorMessage = "The field ProductId is required")]

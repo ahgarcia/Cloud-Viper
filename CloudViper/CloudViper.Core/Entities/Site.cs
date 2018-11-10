@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class Site : AuditableEntity<Site>
+    public class Site : BaseEntity
     {
         [ForeignKey("Company")]
         [Required(ErrorMessage = "The field CompanyId is required")]

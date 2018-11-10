@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class EmployeeDepartmentHistory : AuditableEntity<EmployeeDepartmentHistory>
+    public class EmployeeDepartmentHistory : BaseEntity
     {
         [ForeignKey("Employee")]
         [Required(ErrorMessage = "The field EmployeeId is required")]

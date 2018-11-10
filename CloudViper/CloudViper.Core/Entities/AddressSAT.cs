@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class AddressSAT : AuditableEntity<AddressSAT>
+    public class AddressSAT : BaseEntity
     {
         [ForeignKey("RoadType")]
         [Required(ErrorMessage = "The field RoadTypeId is required")]

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CloudViper.Core.Entities
 {
-    public class Employee : AuditableEntity<Employee>
+    public class Employee : BaseEntity
     {
         [Required(ErrorMessage = "The field EmployeeNumber is required")]
         [StringLength(100, ErrorMessage = "The field EmployeeNumber must have max length of 100 characters")]

@@ -9,7 +9,7 @@ using CloudViper.Core.Entities.Common;
 
 namespace CloudViper.Core.Entities
 {
-    public class Product : AuditableEntity<Product>
+    public class Product : BaseEntity
     {
         [Required(ErrorMessage = "The field BarCode is required")]
         [StringLength(21, ErrorMessage = "The field BarCode must have max length of 21 characters")]

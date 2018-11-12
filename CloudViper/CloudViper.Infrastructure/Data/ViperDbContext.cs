@@ -1,5 +1,7 @@
 ﻿using CloudViper.Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -46,12 +48,17 @@ namespace CloudViper.Infrastructure.Data
         {
             if (!optionsBuilder.IsConfigured)
             { 
-                optionsBuilder.UseMySql(@"server=localhost;user id=root;database=viper_developments;port=3306");
+                optionsBuilder.UseMySql(@"Server=localhost;Port=3306;Database=viper_developments;Uid=root;Pwd=;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            foreach (IMutableEntityType entity in modelBuilder.Model.GetEntityTypes())
+            {
+                entity.Relational().TableName = entity.DisplayName();
+            }
+
             base.OnModelCreating(modelBuilder);
         }
     }
